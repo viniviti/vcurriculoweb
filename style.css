@@ -1,19 +1,36 @@
+:root {
+  --fnt-prim: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fnt-secun: 'Roboto', sans-serif;
+  
+  --cor-prim: #1900ff;
+  --cor-secun: #007c91;
+  --cor-terc: #333333;
+  --cor-qurt: #003366;
+  --cor-quint: #555555;
+  --cor-sext: #e0f7fa;
+  --cor-setm: #0099cc;
+  --cor-wht: #ffffff;
+  --cor-blk: #000000;
+
+  --backg-cor: #f9f9f9;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: var(--fnt-prim);
+  background-color: var(--backg-cor);
+  color: var(--cor-terc);
   line-height: 1.6;
   padding: 20px;
 }
 .container {
   max-width: 900px;
   margin: auto;
-  background: white;
+  background: var(--cor-wht);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -31,11 +48,11 @@ header {
 }
 header h1 {
   font-size: 2.5rem;
-  color: #003366;
+  color: var(--cor-prim);
 }
 header p {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--cor-quint);
 }
 
 /* MAIN */
@@ -43,7 +60,7 @@ section {
   margin-bottom: 30px;
 }
 h2 {
-  color: #003366;
+  color: var(--cor-prim);
   margin-bottom: 10px;
 }
 ul {
@@ -52,16 +69,25 @@ ul {
 }
 ul li::before {
   content: "• ";
-  color: #0099cc;
+  color: var(--cor-setm);
 }
 .tag {
   display: inline-block;
-  background: #e0f7fa;
-  color: #007c91;
+  background: var(--cor-sext);
+  color: var(--cor-secun);
   padding: 5px 10px;
   border-radius: 8px;
   margin: 3px;
   font-size: 1rem;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0 0 0;
+}
+.logo {
+  width: 120px;
 }
 
 @media screen and (max-width: 768px) {
@@ -83,6 +109,9 @@ ul li::before {
   @media screen and (max-width: 425px) {
     .tag {
       font-size: 1rem;
+    }
+    .logo {
+      width: 100px;
     }
   }
 }
