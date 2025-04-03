@@ -102,6 +102,7 @@ ul li::before {
 }
 .logo {
   width: 120px;
+  user-select: none;
 }
 
 @media screen and (max-width: 768px) {
