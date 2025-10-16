@@ -20,27 +20,106 @@
     <title>VCurrículo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="container">
+    <nav class="topbar" aria-label="Barra de ferramentas">
+      <div class="left-group">
+        <button id="menuToggle" class="btn ghost menu-mobile-only" title="Menu">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <div class="menu-items" data-state="closed">
+          <div class="lang" data-state="closed">
+            <button
+              id="langBtn"
+              class="btn ghost"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              title="Idioma"
+            >
+              🌐 <span id="langCurrent" class="text-on-desktop">Português (BR)</span> ▾
+            </button>
+            <ul
+              id="langMenu"
+              class="menu"
+              role="listbox"
+              aria-label="Selecionar idioma"
+            >
+              <li role="option" data-lang="pt-BR">Português (BR)</li>
+              <li role="option" data-lang="en">English</li>
+              <li role="option" data-lang="fr">Français</li>
+              <li role="option" data-lang="es">Español</li>
+              <li role="option" data-lang="it">Italiano</li>
+            </ul>
+          </div>
+
+          <button
+            id="themeToggle"
+            class="btn ghost"
+            aria-pressed="false"
+            title="Alternar tema"
+          >
+            🌓 <span data-i18n="toggleTheme" class="text-on-desktop">Tema</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="right-group">
+        <button id="btnDownload" class="btn primary" title="Baixar PDF">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 3v10m0 0l4-4m-4 4l-4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span data-i18n="downloadPdf" class="text-on-desktop">Baixar PDF</span>
+        </button>
+      </div>
+    </nav>
+    <div class="container" id="cvRoot">
       <header>
         <img
           src="./image/fotoLinkedIn.png"
           class="pf-img"
           alt="Foto de perfil do Vinícius Freitas Viti"
         />
-        <h1>Vinícius Freitas Viti</h1>
-        <p>Estudante de Ciência da Computação</p>
+        <h1 id="headerName">Vinícius Freitas Viti</h1>
+        <p id="role" data-i18n="role">Estudante de Ciência da Computação</p>
         <p>
-          E-mail: viti.2901@gmail.com | Telefone:
-          <a href="https://wa.me/35998178132">(35) 99817-8132</a> | Localização:
-          MG - Brasil
+          <span data-i18n="emailLabel">E-mail:</span> viti.2901@gmail.com | <span data-i18n="phoneLabel">Telefone:</span>
+          <a href="https://wa.me/35998178132">(35) 99817-8132</a> |
+          <span data-i18n="locationLabel">Localização:</span>
+          <span id="locationValue">MG - Brasil</span>
         </p>
       </header>
 
       <main>
         <section>
-          <h2>Objetivo</h2>
-          <p>
+          <h2 data-i18n="objective">Objetivo</h2>
+          <p id="objective-p">
             Estudante de Ciência da Computação com previsão de formatura para
             dezembro de 2025, entusiasta de desenvolvimento web e tecnologias
             emergentes. Possuo experiência prática com frameworks modernos (como
@@ -53,45 +132,45 @@
         </section>
 
         <section>
-          <h2>Formação Acadêmica</h2>
-          <p><strong>Curso:</strong> Bacharelado em Ciência da Computação</p>
-          <p><strong>Instituição:</strong> PUC Minas Poços de Caldas</p>
-          <p><strong>Previsão de Conclusão:</strong> Dezembro/2025</p>
+          <h2 data-i18n="education">Formação Acadêmica</h2>
+          <p id="education-course"><strong>Curso:</strong> Bacharelado em Ciência da Computação</p>
+          <p id="education-institution"><strong>Instituição:</strong> PUC Minas Poços de Caldas</p>
+          <p id="education-graduation"><strong>Previsão de Conclusão:</strong> Dezembro/2025</p>
         </section>
 
         <section>
-          <h2>Experiência Acadêmica e Projetos</h2>
+          <h2 data-i18n="projects">Experiência Acadêmica e Projetos</h2>
           <ul>
-            <li>
+            <li data-i18n="p1">
               Oficina de HTML, CSS e JavaScript para criação básica de um
               currículo, desenvolvido no Bloco de Notas.
             </li>
-            <li>
+            <li data-i18n="p2">
               Oficina de React JS para criação básica de um jogo de cartas,
               desenvolvido no VS Code.
             </li>
-            <li>
+            <li data-i18n="p3">
               Oficina de metaverso, para compreesão do conteúdo e criação básica
               de modelos 3D, desenvolvida no Blender3D.
             </li>
-            <li>
+            <li data-i18n="p4">
               Desenvolvimento de portfólio pessoal com HTML, CSS e JavaScript.
             </li>
-            <li>
+            <li data-i18n="p5">
               Participação em workshop com o intuito de ajudar a criar e a
               desenvolver startups (Fator S Agita, SEBRAE em parceria com a PUC
               Minas).
             </li>
-            <li>
+            <li data-i18n="p6">
               Projeto de TAI (Trabalho Acadêmico Integrado), para criação de um
               app responsável para cuidar de plantas de pequeno porte e criação
               de um protótipo de um vaso inteligente com Arduino, integrado no
               app. Projeto escolhido pela PUCTec 2024.
             </li>
-            <li>
+            <li data-i18n="p7">
               Visualização BIM em Realidade Misturada (Projeto Universitário -
               Em Desenvolvimento).<br />
-              <span style="font-size: 14px; margin-left: 20px"
+              <span id="p7sub" style="font-size: 14px; margin-left: 20px"
                 >- Desenvolvimento de uma plataforma interativa para
                 visualização de modelos BIM utilizando Realidade Misturada (RM),
                 permitindo a manipulação de modelos 3D em dispositivos
@@ -99,70 +178,72 @@
                 Engine para renderização otimizada e integra APIs BIM para
                 sincronização de dados em tempo real, proporcionando uma
                 experiência imersiva e interativa para profissionais da
-                construção civil.</span
+                construção civil.</span
               >
             </li>
           </ul>
         </section>
 
         <section>
-          <h2>Experiência Profissional</h2>
+          <h2 data-i18n="experience">Experiência Profissional</h2>
           <ul>
-            <div>
-              <h3>Desenvolver Front-End Júnior | Kapibara Softwares</h3>
-              <p><i>abr 2023 - ago 2023</i></p>
-              <li>
+            <div id="job-j1">
+              <h3 data-i18n-job="j1-title">Desenvolver Front-End Júnior | Kapibara Softwares</h3>
+              <p data-i18n-job="j1-date"><i>abr 2023 - ago 2023</i></p>
+              <li data-i18n-job="j1-a">
                 Desenvolvimento de interfaces web utilizando o framework Angular
                 com TypeScript.
               </li>
-              <li>
+              <li data-i18n-job="j1-b">
                 Integração de tecnologias como HTML5, CSS3, JavaScript,
                 Bootstrap e banco de dados MySQL.
               </li>
-              <li>
+              <li data-i18n-job="j1-c">
                 Aprimoramento das habilidades de front-end e boas práticas de
                 desenvolvimento web.
               </li>
             </div>
-            <div>
-              <h3>Auxiliar Operacional | ID Logistics</h3>
-              <p><i>abr 2024 - jul 2024</i></p>
-              <li>
+            <div id="job-j2">
+              <h3 data-i18n-job="j2-title">Auxiliar Operacional | ID Logistics</h3>
+              <p data-i18n-job="j2-date"><i>abr 2024 - jul 2024</i></p>
+              <li data-i18n-job="j2-a">
                 Desenvolvimento de habilidades de comunicação e trabalho em
                 equipe ao interagir com diversos setores dentro da multinacional
                 Danone.
               </li>
-              <li>
+              <li data-i18n-job="j2-b">
                 Trabalho conjunto com profissionais de diferentes áreas,
                 aprimorando a comunicação e a colaboração interdepartamental.
               </li>
-              <li>
+              <li data-i18n-job="j2-c">
                 Contato com tecnologia de APIs para operação de robôs, ampliando
                 a compreensão sobre automação e processos tecnológicos.
               </li>
-              <h3>Controlador de Estoque | ID Logistics</h3>
-              <p><i>ago 2024 - mai 2025</i></p>
-              <li>
+            </div>
+            <div id="job-j3">
+              <h3 data-i18n-job="j3-title">Controlador de Estoque | ID Logistics</h3>
+              <p data-i18n-job="j3-date"><i>ago 2024 - mai 2025</i></p>
+              <li data-i18n-job="j3-a">
                 Gestão e controle de AMRs (robôs autônomos) no setor logístico,
                 otimizando a operação.
               </li>
-              <li>
+              <li data-i18n-job="j3-b">
                 Elaboração e fornecimento de relatórios diários sobre as
                 operações, garantindo eficiência nos processos.
               </li>
             </div>
-            <div>
-              <h3>Desenvolvedor Front-End Júnior | Neuronex</h3>
-              <p><i>mai 2025 - atualmente</i></p>
-              <li>
+            <div id="job-j4">
+              <h3 data-i18n-job="j4-title">Desenvolvedor Front-End Júnior | Neuronex</h3>
+              <p data-i18n-job="j4-date"><i>mai 2025 - atualmente</i></p>
+              <li data-i18n-job="j4-a">
                 Desenvolvimento do portal web da Anna, inteligência artificial
                 voltada ao atendimento de laboratórios.
               </li>
-              <li>
+              <li data-i18n-job="j4-b">
                 Criação de painéis e interfaces interativas em Next.js, Tailwind
                 e TypeScript, conectadas ao back-end da IA.
               </li>
-              <li>
+              <li data-i18n-job="j4-c">
                 Foco em usabilidade, desempenho e integração das funcionalidades
                 da assistente no ambiente do cliente.
               </li>
@@ -171,8 +252,8 @@
         </section>
 
         <section>
-          <h2>Habilidades Técnicas</h2>
-          <div>
+          <h2 data-i18n="skills">Habilidades Técnicas</h2>
+          <div id="skills-tags">
             <span class="tag">HTML5</span>
             <span class="tag">CSS3</span>
             <span class="tag">JavaScript</span>
@@ -200,92 +281,92 @@
         </section>
 
         <section>
-          <h2>Soft Skills</h2>
-          <ul>
-            <li>Criatividade</li>
-            <li>Comunicação Clara (verbal e escrita)</li>
-            <li>Gestão de Tempo</li>
-            <li>Facilidade em Aprender Novas Tecnologias</li>
-            <li>Empatia e Inteligência Emocional</li>
-            <li>Proatividade e Curiosidade</li>
-            <li>Trabalho em Equipe e Colaboração</li>
-            <li>Resolução de Problemas com Pensamento Lógico</li>
+          <h2 data-i18n="softSkills">Soft Skills</h2>
+          <ul id="softSkills-list">
+            <li data-i18n-soft="s1">Criatividade</li>
+            <li data-i18n-soft="s2">Comunicação Clara (verbal e escrita)</li>
+            <li data-i18n-soft="s3">Gestão de Tempo</li>
+            <li data-i18n-soft="s4">Facilidade em Aprender Novas Tecnologias</li>
+            <li data-i18n-soft="s5">Empatia e Inteligência Emocional</li>
+            <li data-i18n-soft="s6">Proatividade e Curiosidade</li>
+            <li data-i18n-soft="s7">Trabalho em Equipe e Colaboração</li>
+            <li data-i18n-soft="s8">Resolução de Problemas com Pensamento Lógico</li>
           </ul>
         </section>
 
         <section>
-          <h2>Idiomas</h2>
-          <ul>
-            <li>Português: Nativo</li>
-            <li>Inglês: Intermediário (em aprimoramento)</li>
-            <li>Espanhol: Básico (ensino escolar)</li>
-            <li>Frânces: Básico</li>
+          <h2 data-i18n="languages">Idiomas</h2>
+          <ul id="languages-list">
+            <li data-i18n-lang="l1">Português: Nativo</li>
+            <li data-i18n-lang="l2">Inglês: Intermediário (em aprimoramento)</li>
+            <li data-i18n-lang="l3">Espanhol: Básico (ensino escolar)</li>
+            <li data-i18n-lang="l4">Frânces: Básico</li>
           </ul>
         </section>
 
         <section>
-          <h2>Certificados</h2>
-          <ul>
-            <div>
-              <h3>
+          <h2 data-i18n="certificates">Certificados</h2>
+          <ul id="certificates-list">
+            <div data-i18n-cert="c1">
+              <h3 data-i18n-cert-title="c1-title">
                 Realidade Misturada Aplicações Gráficas Imersivas e Não
                 Imersivas | PUC Minas
               </h3>
-              <li><i>29 de abril de 2022 | 03h</i></li>
+              <li data-i18n-cert-date="c1-date"><i>29 de abril de 2022 | 03h</i></li>
             </div>
-            <div>
-              <h3>
+            <div data-i18n-cert="c2">
+              <h3 data-i18n-cert-title="c2-title">
                 Oficina: Construção de Páginas Web com HTML, CSS E JavaScript |
                 PUC Minas
               </h3>
-              <li><i>06 de maio de 2022 | 15h</i></li>
+              <li data-i18n-cert-date="c2-date"><i>06 de maio de 2022 | 15h</i></li>
             </div>
-            <div>
-              <h3>Formação: Pratique HTML, CSS em Projetos Web | Alura</h3>
-              <li><i>24 de agosto de 2022 | 35h</i></li>
+            <div data-i18n-cert="c3">
+              <h3 data-i18n-cert-title="c3-title">Formação: Pratique HTML, CSS em Projetos Web | Alura</h3>
+              <li data-i18n-cert-date="c3-date"><i>24 de agosto de 2022 | 35h</i></li>
             </div>
-            <div>
-              <h3>CSS: Dispondo Elementos com Flexbox e Grid | Alura</h3>
-              <li><i>01 de setembro de 2022 | 08h</i></li>
+            <div data-i18n-cert="c4">
+              <h3 data-i18n-cert-title="c4-title">CSS: Dispondo Elementos com Flexbox e Grid | Alura</h3>
+              <li data-i18n-cert-date="c4-date"><i>01 de setembro de 2022 | 08h</i></li>
             </div>
-            <div>
-              <h3>Excel: Domine o Editor de Planilhas | Alura</h3>
-              <li><i>15 de setembro de 2022 | 10h</i></li>
+            <div data-i18n-cert="c5">
+              <h3 data-i18n-cert-title="c5-title">Excel: Domine o Editor de Planilhas | Alura</h3>
+              <li data-i18n-cert-date="c5-date"><i>15 de setembro de 2022 | 10h</i></li>
             </div>
-            <div>
-              <h3>Curso Front-End Compelto 2.0 | Danki Code</h3>
-              <li><i>06 de setembro de 2023 | 10h</i></li>
+            <div data-i18n-cert="c6">
+              <h3 data-i18n-cert-title="c6-title">Curso Front-End Compelto 2.0 | Danki Code</h3>
+              <li data-i18n-cert-date="c6-date"><i>06 de setembro de 2023 | 10h</i></li>
             </div>
-            <div>
-              <h3>NLW Expert trilha de HTML, CSS e Javascript | Rocketseat</h3>
-              <li><i>09 de fevereiro de 2024 | 05h</i></li>
+            <div data-i18n-cert="c7">
+              <h3 data-i18n-cert-title="c7-title">NLW Expert trilha de HTML, CSS e Javascript | Rocketseat</h3>
+              <li data-i18n-cert-date="c7-date"><i>09 de fevereiro de 2024 | 05h</i></li>
             </div>
           </ul>
         </section>
 
         <section>
-          <h2>Informações Adicionais</h2>
-          <ul>
-            <li>Interesse por novas tecnologias e soluções inovadoras.</li>
-            <li>
+          <h2 data-i18n="extra">Informações Adicionais</h2>
+          <ul id="extra-list">
+            <li data-i18n-extra="e1">Interesse por novas tecnologias e soluções inovadoras.</li>
+            <li data-i18n-extra="e2">
               Perfil no GitHub:
               <a href="https://github.com/viniviti" target="_blank"
                 >github.com/viniviti</a
               >
             </li>
-            <li>
+            <li data-i18n-extra="e3">
               Currículo digital:
               <a href="https://vcurriculoweb.vercel.app/" target="_blank"
                 >vcurriculoweb.vercel.app/</a
               >
             </li>
-            <li>
+            <li data-i18n-extra="e4">
               Portfólio pessoal:
               <a href="https://vportfolioweb.vercel.app/" target="_blank"
                 >vportfolioweb.vercel.app/</a
               >
             </li>
-            <li>
+            <li data-i18n-extra="e5">
               Blog de poesias:
               <a href="https://blog-do-vinice.vercel.app/" target="_blank"
                 >blog-do-vinice.vercel.app/</a
@@ -303,5 +384,1071 @@
         </div>
       </main>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    ></script>
+
+    <script>
+      const I18N = {
+        "pt-BR": {
+          labels: {
+            toggleTheme: "Tema",
+            downloadPdf: "Baixar PDF",
+            locationLabel: "Localização:",
+            emailLabel: "E-mail:",
+            phoneLabel: "Telefone:",
+            objective: "Objetivo",
+            education: "Formação Acadêmica",
+            projects: "Experiência Acadêmica e Projetos",
+            experience: "Experiência Profissional",
+            skills: "Habilidades Técnicas",
+            softSkills: "Soft Skills",
+            languages: "Idiomas",
+            certificates: "Certificados",
+            extra: "Informações Adicionais",
+          },
+          header: {
+            name: "Vinícius Freitas Viti",
+            role: "Estudante de Ciência da Computação",
+            locationValue: "MG - Brasil",
+          },
+          objective: {
+            p: "Estudante de Ciência da Computação com previsão de formatura para dezembro de 2025, entusiasta de desenvolvimento web e tecnologias emergentes. Possuo experiência prática com frameworks modernos (como Angular e React), versionamento de código, metodologias ágeis (Scrum, XP, Kanban) e estou sempre buscando aprimorar meus conhecimentos. Busco uma oportunidade de estágio onde possa aplicar meus aprendizados acadêmicos em um ambiente real, colaborativo e inovador.",
+          },
+          education: {
+            courseLabel: "Curso:",
+            course: "Bacharelado em Ciência da Computação",
+            institutionLabel: "Instituição:",
+            institution: "PUC Minas Poços de Caldas",
+            graduationLabel: "Previsão de Conclusão:",
+            graduation: "Dezembro/2025",
+          },
+          projects: {
+            p1: "Oficina de HTML, CSS e JavaScript para criação básica de um currículo, desenvolvido no Bloco de Notas.",
+            p2: "Oficina de React JS para criação básica de um jogo de cartas, desenvolvido no VS Code.",
+            p3: "Oficina de metaverso, para compreesão do conteúdo e criação básica de modelos 3D, desenvolvida no Blender3D.",
+            p4: "Desenvolvimento de portfólio pessoal com HTML, CSS e JavaScript.",
+            p5: "Participação em workshop com o intuito de ajudar a criar e a desenvolver startups (Fator S Agita, SEBRAE em parceria com a PUC Minas).",
+            p6: "Projeto de TAI (Trabalho Acadêmico Integrado), para criação de um app responsável para cuidar de plantas de pequeno porte e criação de um protótipo de um vaso inteligente com Arduino, integrado no app. Projeto escolhido pela PUCTec 2024.",
+            p7: "Visualização BIM em Realidade Misturada (Projeto Universitário - Em Desenvolvimento).",
+            p7sub:
+              "- Desenvolvimento de uma plataforma interativa para visualização de modelos BIM utilizando Realidade Misturada (RM), permitindo a manipulação de modelos 3D em dispositivos compatíveis com ARKit e ARCore. O projeto utiliza Unity/Unreal Engine para renderização otimizada e integra APIs BIM para sincronização de dados em tempo real, proporcionando uma experiência imersiva e interativa para profissionais da construção civil.",
+          },
+          experience: {
+            j1: {
+              title: "Desenvolver Front-End Júnior | Kapibara Softwares",
+              date: "abr 2023 - ago 2023",
+              a: "Desenvolvimento de interfaces web utilizando o framework Angular com TypeScript.",
+              b: "Integração de tecnologias como HTML5, CSS3, JavaScript, Bootstrap e banco de dados MySQL.",
+              c: "Aprimoramento das habilidades de front-end e boas práticas de desenvolvimento web.",
+            },
+            j2: {
+              title: "Auxiliar Operacional | ID Logistics",
+              date: "abr 2024 - jul 2024",
+              a: "Desenvolvimento de habilidades de comunicação e trabalho em equipe ao interagir com diversos setores dentro da multinacional Danone.",
+              b: "Trabalho conjunto com profissionais de diferentes áreas, aprimorando a comunicação e a colaboração interdepartamental.",
+              c: "Contato com tecnologia de APIs para operação de robôs, ampliando a compreensão sobre automação e processos tecnológicos.",
+            },
+            j3: {
+              title: "Controlador de Estoque | ID Logistics",
+              date: "ago 2024 - mai 2025",
+              a: "Gestão e controle de AMRs (robôs autônomos) no setor logístico, otimizando a operação.",
+              b: "Elaboração e fornecimento de relatórios diários sobre as operações, garantindo eficiência nos processos.",
+            },
+            j4: {
+              title: "Desenvolvedor Front-End Júnior | Neuronex",
+              date: "mai 2025 - atualmente",
+              a: "Desenvolvimento do portal web da Anna, inteligência artificial voltada ao atendimento de laboratórios.",
+              b: "Criação de painéis e interfaces interativas em Next.js, Tailwind e TypeScript, conectadas ao back-end da IA.",
+              c: "Foco em usabilidade, desempenho e integração das funcionalidades da assistente no ambiente do cliente.",
+            },
+          },
+          skills: {
+            tags: [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Git & GitHub",
+              "Python",
+              "TypeScript",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Angular",
+              "Next.js",
+              "Nest JS",
+              "React JS",
+              "React Native",
+              "Linguagem C",
+              "Linguagem C#",
+              "Linguagem C++",
+              "Scrum",
+              "Extreme Programming (XP)",
+              "Kanban",
+              "Exel",
+              "Power BI",
+              "MySQL",
+              "PostgreSQL",
+            ],
+          },
+          softSkills: [
+            "Criatividade",
+            "Comunicação Clara (verbal e escrita)",
+            "Gestão de Tempo",
+            "Facilidade em Aprender Novas Tecnologias",
+            "Empatia e Inteligência Emocional",
+            "Proatividade e Curiosidade",
+            "Trabalho em Equipe e Colaboração",
+            "Resolução de Problemas com Pensamento Lógico",
+          ],
+          languages: [
+            "Português: Nativo",
+            "Inglês: Intermediário (em aprimoramento)",
+            "Espanhol: Básico (ensino escolar)",
+            "Francês: Básico",
+          ],
+          certificates: [
+            {
+              title:
+                "Realidade Misturada Aplicações Gráficas Imersivas e Não Imersivas | PUC Minas",
+              date: "29 de abril de 2022 | 03h",
+            },
+            {
+              title:
+                "Oficina: Construção de Páginas Web com HTML, CSS E JavaScript | PUC Minas",
+              date: "06 de maio de 2022 | 15h",
+            },
+            {
+              title: "Formação: Pratique HTML, CSS em Projetos Web | Alura",
+              date: "24 de agosto de 2022 | 35h",
+            },
+            {
+              title: "CSS: Dispondo Elementos com Flexbox e Grid | Alura",
+              date: "01 de setembro de 2022 | 08h",
+            },
+            {
+              title: "Excel: Domine o Editor de Planilhas | Alura",
+              date: "15 de setembro de 2022 | 10h",
+            },
+            {
+              title: "Curso Front-End Compelto 2.0 | Danki Code",
+              date: "06 de setembro de 2023 | 10h",
+            },
+            {
+              title: "NLW Expert trilha de HTML, CSS e Javascript | Rocketseat",
+              date: "09 de fevereiro de 2024 | 05h",
+            },
+          ],
+          extra: {
+            items: [
+              "Interesse por novas tecnologias e soluções inovadoras.",
+              "Perfil no GitHub:",
+              "Currículo digital:",
+              "Portfólio pessoal:",
+              "Blog de poesias:",
+            ],
+          },
+        },
+
+        en: {
+          labels: {
+            toggleTheme: "Theme",
+            downloadPdf: "Download PDF",
+            locationLabel: "Location:",
+            emailLabel: "Email:",
+            phoneLabel: "Phone:",
+            objective: "Objective",
+            education: "Education",
+            projects: "Academic Experience & Projects",
+            experience: "Professional Experience",
+            skills: "Technical Skills",
+            softSkills: "Soft Skills",
+            languages: "Languages",
+            certificates: "Certificates",
+            extra: "Additional Information",
+          },
+          header: {
+            name: "Vinícius Freitas Viti",
+            role: "Computer Science Student",
+            locationValue: "MG - Brazil",
+          },
+          objective: {
+            p: "Computer Science student graduating in December 2025, enthusiastic about web development and emerging technologies. Hands-on experience with modern frameworks (such as Angular and React), version control, and agile methodologies (Scrum, XP, Kanban). Seeking an internship to apply my learning in a real, collaborative, and innovative environment.",
+          },
+          education: {
+            courseLabel: "Course:",
+            course: "B.Sc. in Computer Science",
+            institutionLabel: "Institution:",
+            institution: "PUC Minas – Poços de Caldas",
+            graduationLabel: "Expected Graduation:",
+            graduation: "December/2025",
+          },
+          projects: {
+            p1: "Workshop on HTML, CSS and JavaScript to build a basic résumé from scratch (Notepad).",
+            p2: "React JS workshop to create a basic card game (built in VS Code).",
+            p3: "Metaverse workshop covering fundamentals and basic 3D models (Blender).",
+            p4: "Personal portfolio developed with HTML, CSS and JavaScript.",
+            p5: "Startup workshop (Fator S Agita, SEBRAE in partnership with PUC Minas).",
+            p6: "TAI Project (Integrated Academic Work): App for caring for small plants and a prototype of an intelligent pot using Arduino. Project selected by PUCTec 2024.",
+            p7: "BIM Visualization in Mixed Reality (University Project – In Development).",
+            p7sub:
+              "- Development of an interactive platform for visualizing BIM models using Mixed Reality (MR), enabling manipulation of 3D models on ARKit/ARCore devices. The project uses Unity/Unreal Engine for optimized rendering and integrates BIM APIs for real-time data sync, providing an immersive and interactive experience for construction professionals.",
+          },
+          experience: {
+            j1: {
+              title: "Junior Front-End Developer | Kapibara Softwares",
+              date: "Apr 2023 - Aug 2023",
+              a: "Built web interfaces using Angular and TypeScript.",
+              b: "Integrated HTML5, CSS3, JavaScript, Bootstrap and MySQL.",
+              c: "Improved front-end skills and web development best practices.",
+            },
+            j2: {
+              title: "Operations Assistant | ID Logistics",
+              date: "Apr 2024 - Jul 2024",
+              a: "Developed communication and teamwork skills while interacting with multiple sectors at Danone.",
+              b: "Collaborated with professionals from different areas, improving interdepartmental communication.",
+              c: "Exposure to API technology for robot operation, expanding understanding of automation and tech processes.",
+            },
+            j3: {
+              title: "Inventory Controller | ID Logistics",
+              date: "Aug 2024 - May 2025",
+              a: "Managed and controlled AMRs (autonomous robots) in logistics to optimize operations.",
+              b: "Produced daily operational reports to ensure process efficiency.",
+            },
+            j4: {
+              title: "Junior Front-End Developer | Neuronex",
+              date: "May 2025 - Present",
+              a: "Developing the web portal for Anna, an AI focused on laboratory customer service.",
+              b: "Creating dashboards and interactive interfaces in Next.js, Tailwind and TypeScript, connected to the AI back end.",
+              c: "Focus on usability, performance and integration of the assistant’s features into the client environment.",
+            },
+          },
+          skills: {
+            tags: [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Git & GitHub",
+              "Python",
+              "TypeScript",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Angular",
+              "Next.js",
+              "Nest JS",
+              "React JS",
+              "React Native",
+              "C Language",
+              "C# Language",
+              "C++ Language",
+              "Scrum",
+              "Extreme Programming (XP)",
+              "Kanban",
+              "Excel",
+              "Power BI",
+              "MySQL",
+              "PostgreSQL",
+            ],
+          },
+          softSkills: [
+            "Creativity",
+            "Clear Communication (verbal and written)",
+            "Time Management",
+            "Ability to Learn New Technologies",
+            "Empathy and Emotional Intelligence",
+            "Proactivity and Curiosity",
+            "Teamwork and Collaboration",
+            "Problem Solving with Logical Thinking",
+          ],
+          languages: [
+            "Portuguese: Native",
+            "English: Intermediate (improving)",
+            "Spanish: Basic (school level)",
+            "French: Basic",
+          ],
+          certificates: [
+            {
+              title:
+                "Mixed Reality – Immersive and Non-Immersive Graphic Applications | PUC Minas",
+              date: "April 29, 2022 | 03h",
+            },
+            {
+              title:
+                "Workshop: Building Web Pages with HTML, CSS & JavaScript | PUC Minas",
+              date: "May 06, 2022 | 15h",
+            },
+            {
+              title: "Program: Practice HTML & CSS in Web Projects | Alura",
+              date: "August 24, 2022 | 35h",
+            },
+            {
+              title: "CSS: Layout with Flexbox and Grid | Alura",
+              date: "September 01, 2022 | 08h",
+            },
+            {
+              title: "Excel: Master the Spreadsheet Editor | Alura",
+              date: "September 15, 2022 | 10h",
+            },
+            {
+              title: "Front-End Complete 2.0 Course | Danki Code",
+              date: "September 06, 2023 | 10h",
+            },
+            {
+              title: "NLW Expert – HTML, CSS & JavaScript Track | Rocketseat",
+              date: "February 09, 2024 | 05h",
+            },
+          ],
+          extra: {
+            items: [
+              "Interest in new technologies and innovative solutions.",
+              "GitHub profile:",
+              "Digital résumé:",
+              "Personal portfolio:",
+              "Poetry blog:",
+            ],
+          },
+        },
+
+        fr: {
+          labels: {
+            toggleTheme: "Thème",
+            downloadPdf: "Télécharger le PDF",
+            locationLabel: "Localisation :",
+            emailLabel: "E-mail :",
+            phoneLabel: "Téléphone :",
+            objective: "Objectif",
+            education: "Formation",
+            projects: "Expérience académique et projets",
+            experience: "Expérience professionnelle",
+            skills: "Compétences techniques",
+            softSkills: "Compétences comportementales",
+            languages: "Langues",
+            certificates: "Certificats",
+            extra: "Informations supplémentaires",
+          },
+          header: {
+            name: "Vinícius Freitas Viti",
+            role: "Étudiant en Informatique",
+            locationValue: "MG - Brésil",
+          },
+          objective: {
+            p: "Étudiant en informatique (diplôme prévu en décembre 2025), passionné par le développement web et les technologies émergentes. Expérience pratique avec des frameworks modernes (Angular, React), contrôle de version et méthodes agiles (Scrum, XP, Kanban). Je recherche un stage pour appliquer mes acquis dans un environnement réel, collaboratif et innovant.",
+          },
+          education: {
+            courseLabel: "Cours :",
+            course: "Licence en Informatique",
+            institutionLabel: "Établissement :",
+            institution: "PUC Minas – Poços de Caldas",
+            graduationLabel: "Diplôme prévu :",
+            graduation: "Décembre/2025",
+          },
+          projects: {
+            p1: "Atelier HTML, CSS et JavaScript pour créer un CV basique (bloc-notes).",
+            p2: "Atelier React JS pour un jeu de cartes simple (VS Code).",
+            p3: "Atelier métavers : notions et modèles 3D de base (Blender).",
+            p4: "Portfolio personnel développé avec HTML, CSS et JavaScript.",
+            p5: "Atelier de création de startups (Fator S Agita, SEBRAE en partenariat avec la PUC Minas).",
+            p6: "Projet TAI (Travail Académique Intégré) : Application pour plantes et prototype de pot intelligent Arduino. Projet sélectionné par PUCTec 2024.",
+            p7: "Visualisation BIM en Réalité Mixte (projet universitaire – en cours).",
+            p7sub:
+              "- Développement d’une plateforme interactive pour la visualisation de modèles BIM en Réalité Mixte (ARKit/ARCore), rendu avec Unity/Unreal et intégration d’APIs BIM pour la synchronisation des données en temps réel, offrant une expérience immersive aux professionnels du BTP.",
+          },
+          experience: {
+            j1: {
+              title: "Développeur Front-End Junior | Kapibara Softwares",
+              date: "avr. 2023 - août 2023",
+              a: "Interfaces web avec Angular et TypeScript.",
+              b: "Intégration de HTML5, CSS3, JavaScript, Bootstrap et MySQL.",
+              c: "Amélioration des compétences front-end et des bonnes pratiques.",
+            },
+            j2: {
+              title: "Assistant Opérationnel | ID Logistics",
+              date: "avr. 2024 - juil. 2024",
+              a: "Communication et travail d’équipe avec plusieurs services chez Danone.",
+              b: "Collaboration inter-départements et amélioration des processus.",
+              c: "Découverte d’APIs pour l’exploitation de robots et l’automatisation.",
+            },
+            j3: {
+              title: "Contrôleur de Stock | ID Logistics",
+              date: "août 2024 - mai 2025",
+              a: "Gestion et contrôle d’AMR (robots autonomes) en logistique.",
+              b: "Rapports quotidiens pour garantir l’efficacité opérationnelle.",
+            },
+            j4: {
+              title: "Développeur Front-End Junior | Neuronex",
+              date: "mai 2025 - présent",
+              a: "Développement du portail web d’Anna, IA dédiée aux laboratoires.",
+              b: "Tableaux de bord et interfaces en Next.js, Tailwind et TypeScript reliées au back-end IA.",
+              c: "Accent sur l’ergonomie, la performance et l’intégration chez le client.",
+            },
+          },
+          skills: {
+            tags: [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Git & GitHub",
+              "Python",
+              "TypeScript",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Angular",
+              "Next.js",
+              "Nest JS",
+              "React JS",
+              "React Native",
+              "Langage C",
+              "Langage C#",
+              "Langage C++",
+              "Scrum",
+              "Extreme Programming (XP)",
+              "Kanban",
+              "Excel",
+              "Power BI",
+              "MySQL",
+              "PostgreSQL",
+            ],
+          },
+          softSkills: [
+            "Créativité",
+            "Communication claire (orale et écrite)",
+            "Gestion du temps",
+            "Capacité à apprendre de nouvelles technologies",
+            "Empathie et intelligence émotionnelle",
+            "Proactivité et curiosité",
+            "Travail d’équipe et collaboration",
+            "Résolution de problèmes avec pensée logique",
+          ],
+          languages: [
+            "Portugais : Natif",
+            "Anglais : Intermédiaire (en progression)",
+            "Espagnol : Basique (niveau scolaire)",
+            "Français : Basique",
+          ],
+          certificates: [
+            {
+              title:
+                "Réalité Mixte – Applications graphiques immersives et non immersives | PUC Minas",
+              date: "29 avril 2022 | 03h",
+            },
+            {
+              title:
+                "Atelier : Création de pages Web avec HTML, CSS & JavaScript | PUC Minas",
+              date: "06 mai 2022 | 15h",
+            },
+            {
+              title:
+                "Formation : Pratiquer HTML & CSS dans des projets Web | Alura",
+              date: "24 août 2022 | 35h",
+            },
+            {
+              title: "CSS : Flexbox et Grid | Alura",
+              date: "01 septembre 2022 | 08h",
+            },
+            {
+              title: "Excel : Maîtriser le tableur | Alura",
+              date: "15 septembre 2022 | 10h",
+            },
+            {
+              title: "Front-End Complet 2.0 | Danki Code",
+              date: "06 septembre 2023 | 10h",
+            },
+            {
+              title: "NLW Expert – HTML, CSS et JavaScript | Rocketseat",
+              date: "09 février 2024 | 05h",
+            },
+          ],
+          extra: {
+            items: [
+              "Intérêt pour les nouvelles technologies et solutions innovantes.",
+              "Profil GitHub :",
+              "CV en ligne :",
+              "Portfolio personnel :",
+              "Blog de poésie :",
+            ],
+          },
+        },
+
+        es: {
+          labels: {
+            toggleTheme: "Tema",
+            downloadPdf: "Descargar PDF",
+            locationLabel: "Ubicación:",
+            emailLabel: "Correo:",
+            phoneLabel: "Teléfono:",
+            objective: "Objetivo",
+            education: "Formación Académica",
+            projects: "Experiencia Académica y Proyectos",
+            experience: "Experiencia Profesional",
+            skills: "Habilidades Técnicas",
+            softSkills: "Habilidades Blandas",
+            languages: "Idiomas",
+            certificates: "Certificados",
+            extra: "Información Adicional",
+          },
+          header: {
+            name: "Vinícius Freitas Viti",
+            role: "Estudiante de Ciencias de la Computación",
+            locationValue: "MG - Brasil",
+          },
+          objective: {
+            p: "Estudiante con graduación prevista para diciembre de 2025, entusiasta del desarrollo web y de las tecnologías emergentes. Experiencia práctica con frameworks modernos (Angular y React), control de versiones y metodologías ágiles (Scrum, XP, Kanban). Busco una pasantía para aplicar mis aprendizajes en un entorno real, colaborativo e innovador.",
+          },
+          education: {
+            courseLabel: "Carrera:",
+            course: "Licenciatura en Ciencias de la Computación",
+            institutionLabel: "Institución:",
+            institution: "PUC Minas – Poços de Caldas",
+            graduationLabel: "Fecha de Graduación:",
+            graduation: "Diciembre/2025",
+          },
+          projects: {
+            p1: "Taller de HTML, CSS y JavaScript para crear un currículum básico (Bloc de notas).",
+            p2: "Taller de React JS para crear un juego de cartas básico (VS Code).",
+            p3: "Taller de metaverso: nociones y modelos 3D básicos (Blender).",
+            p4: "Portafolio personal con HTML, CSS y JavaScript.",
+            p5: "Taller para la creación y desarrollo de startups (Fator S Agita, SEBRAE y PUC Minas).",
+            p6: "Proyecto TAI (Trabajo Académico Integrado): Aplicación para plantas y prototipo de maceta inteligente Arduino. Proyecto seleccionado por PUCTec 2024.",
+            p7: "Visualización BIM en Realidad Mixta (Proyecto universitario – En desarrollo).",
+            p7sub:
+              "- Desarrollo de una plataforma interactiva para visualizar modelos BIM en Realidad Mixta (ARKit/ARCore), con renderizado en Unity/Unreal e integración de APIs BIM para sincronización de datos en tiempo real, brindando una experiencia inmersiva a profesionales de la construcción.",
+          },
+          experience: {
+            j1: {
+              title: "Desarrollador Front-End Junior | Kapibara Softwares",
+              date: "abr 2023 - ago 2023",
+              a: "Desarrollo de interfaces web con Angular y TypeScript.",
+              b: "Integración con HTML5, CSS3, JavaScript, Bootstrap y MySQL.",
+              c: "Mejora de habilidades de front-end y buenas prácticas.",
+            },
+            j2: {
+              title: "Asistente Operativo | ID Logistics",
+              date: "abr 2024 - jul 2024",
+              a: "Desarrollo de comunicación y trabajo en equipo con múltiples áreas en Danone.",
+              b: "Colaboración interdepartamental y mejora de procesos.",
+              c: "Contacto con APIs para operar robots, ampliando el entendimiento de la automatización.",
+            },
+            j3: {
+              title: "Controlador de Inventario | ID Logistics",
+              date: "ago 2024 - may 2025",
+              a: "Gestión y control de AMR (robots autónomos) en logística para optimizar la operación.",
+              b: "Elaboración de informes operativos diarios para asegurar la eficiencia.",
+            },
+            j4: {
+              title: "Desarrollador Front-End Junior | Neuronex",
+              date: "may 2025 - actual",
+              a: "Desarrollo del portal web de Anna, IA enfocada en la atención de laboratorios.",
+              b: "Creación de paneles e interfaces en Next.js, Tailwind y TypeScript conectadas al back-end de la IA.",
+              c: "Enfoque en usabilidad, rendimiento e integración con el entorno del cliente.",
+            },
+          },
+          skills: {
+            tags: [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Git & GitHub",
+              "Python",
+              "TypeScript",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Angular",
+              "Next.js",
+              "Nest JS",
+              "React JS",
+              "React Native",
+              "Lenguaje C",
+              "Lenguaje C#",
+              "Lenguaje C++",
+              "Scrum",
+              "Extreme Programming (XP)",
+              "Kanban",
+              "Excel",
+              "Power BI",
+              "MySQL",
+              "PostgreSQL",
+            ],
+          },
+          softSkills: [
+            "Creatividad",
+            "Comunicación clara (oral y escrita)",
+            "Gestión del tiempo",
+            "Facilidad para aprender nuevas tecnologías",
+            "Empatía e inteligencia emocional",
+            "Proactividad y curiosidad",
+            "Trabajo en equipo y colaboración",
+            "Resolución de problemas con pensamiento lógico",
+          ],
+          languages: [
+            "Portugués: Nativo",
+            "Inglés: Intermedio (en mejora)",
+            "Español: Básico (nivel escolar)",
+            "Francés: Básico",
+          ],
+          certificates: [
+            {
+              title:
+                "Realidad Mixta – Aplicaciones gráficas inmersivas y no inmersivas | PUC Minas",
+              date: "29 de abril de 2022 | 03h",
+            },
+            {
+              title:
+                "Taller: Construcción de páginas web con HTML, CSS y JavaScript | PUC Minas",
+              date: "06 de mayo de 2022 | 15h",
+            },
+            {
+              title: "Formación: Practica HTML y CSS en proyectos web | Alura",
+              date: "24 de agosto de 2022 | 35h",
+            },
+            {
+              title: "CSS: Flexbox y Grid | Alura",
+              date: "01 de septiembre de 2022 | 08h",
+            },
+            {
+              title: "Excel: Domina el editor de hojas de cálculo | Alura",
+              date: "15 de septiembre de 2022 | 10h",
+            },
+            {
+              title: "Curso Front-End Completo 2.0 | Danki Code",
+              date: "06 de septiembre de 2023 | 10h",
+            },
+            {
+              title: "NLW Expert – HTML, CSS y JavaScript | Rocketseat",
+              date: "09 de febrero de 2024 | 05h",
+            },
+          ],
+          extra: {
+            items: [
+              "Interés por nuevas tecnologías y soluciones innovadoras.",
+              "Perfil de GitHub:",
+              "Currículum digital:",
+              "Portafolio personal:",
+              "Blog de poesías:",
+            ],
+          },
+        },
+
+        it: {
+          labels: {
+            toggleTheme: "Tema",
+            downloadPdf: "Scarica PDF",
+            locationLabel: "Località:",
+            emailLabel: "E-mail:",
+            phoneLabel: "Telefono:",
+            objective: "Obiettivo",
+            education: "Formazione",
+            projects: "Esperienza Accademica e Progetti",
+            experience: "Esperienza Professionale",
+            skills: "Competenze Tecniche",
+            softSkills: "Competenze Trasversali",
+            languages: "Lingue",
+            certificates: "Certificati",
+            extra: "Informazioni Aggiuntive",
+          },
+          header: {
+            name: "Vinícius Freitas Viti",
+            role: "Studente di Informatica",
+            locationValue: "MG - Brasile",
+          },
+          objective: {
+            p: "Studente con laurea prevista a dicembre 2025, appassionato di sviluppo web e tecnologie emergenti. Esperienza pratica con framework moderni (Angular e React), controllo di versione e metodi agili (Scrum, XP, Kanban). Cerco un tirocinio per applicare le competenze in un ambiente reale, collaborativo e innovativo.",
+          },
+          education: {
+            courseLabel: "Corso:",
+            course: "Laurea in Informatica",
+            institutionLabel: "Istituzione:",
+            institution: "PUC Minas – Poços de Caldas",
+            graduationLabel: "Conseguimento previsto:",
+            graduation: "Dicembre/2025",
+          },
+          projects: {
+            p1: "Workshop di HTML, CSS e JavaScript per creare un CV di base (Blocco note).",
+            p2: "Workshop di React JS per un semplice gioco di carte (VS Code).",
+            p3: "Workshop sul metaverso: nozioni e modelli 3D di base (Blender).",
+            p4: "Portfolio personale sviluppato con HTML, CSS e JavaScript.",
+            p5: "Workshop per la creazione e lo sviluppo di startup (Fator S Agita, SEBRAE in collaborazione con PUC Minas).",
+            p6: "Progetto TAI (Lavoro Accademico Integrato): App per piante e prototipo di vaso intelligente Arduino. Progetto selezionato da PUCTec 2024.",
+            p7: "Visualizzazione BIM in Realtà Mista (Progetto universitario – In sviluppo).",
+            p7sub:
+              "- Sviluppo di una piattaforma interattiva per visualizzare modelli BIM in Realtà Mista (ARKit/ARCore), rendering con Unity/Unreal e integrazione di API BIM per la sincronizzazione dei dati in tempo reale, offrendo un’esperienza immersiva ai professionisti delle costruzioni.",
+          },
+          experience: {
+            j1: {
+              title: "Sviluppatore Front-End Junior | Kapibara Softwares",
+              date: "apr 2023 - ago 2023",
+              a: "Sviluppo di interfacce web con Angular e TypeScript.",
+              b: "Integrazione con HTML5, CSS3, JavaScript, Bootstrap e MySQL.",
+              c: "Miglioramento delle competenze front-end e delle buone pratiche.",
+            },
+            j2: {
+              title: "Assistente Operativo | ID Logistics",
+              date: "apr 2024 - lug 2024",
+              a: "Sviluppo della comunicazione e del lavoro di squadra con vari reparti presso Danone.",
+              b: "Collaborazione interdipartimentale e miglioramento dei processi.",
+              c: "Esposizione a tecnologie API per il funzionamento dei robot e l’automazione.",
+            },
+            j3: {
+              title: "Controller di Magazzino | ID Logistics",
+              date: "ago 2024 - mag 2025",
+              a: "Gestione e controllo degli AMR (robot autonomi) nella logistica per ottimizzare le operazioni.",
+              b: "Elaborazione di report operativi giornalieri per garantire l’efficienza.",
+            },
+            j4: {
+              title: "Sviluppatore Front-End Junior | Neuronex",
+              date: "mag 2025 - attuale",
+              a: "Sviluppo del portale web di Anna, IA focalizzata sull’assistenza ai laboratori.",
+              b: "Creazione di dashboard e interfacce in Next.js, Tailwind e TypeScript collegate al back-end IA.",
+              c: "Focus su usabilità, prestazioni e integrazione nel contesto del cliente.",
+            },
+          },
+          skills: {
+            tags: [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "Git & GitHub",
+              "Python",
+              "TypeScript",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Angular",
+              "Next.js",
+              "Nest JS",
+              "React JS",
+              "React Native",
+              "Linguaggio C",
+              "Linguaggio C#",
+              "Linguaggio C++",
+              "Scrum",
+              "Extreme Programming (XP)",
+              "Kanban",
+              "Excel",
+              "Power BI",
+              "MySQL",
+              "PostgreSQL",
+            ],
+          },
+          softSkills: [
+            "Creatività",
+            "Comunicazione chiara (orale e scritta)",
+            "Gestione del tempo",
+            "Capacità di apprendere nuove tecnologie",
+            "Empatia e intelligenza emotiva",
+            "Proattività e curiosità",
+            "Lavoro di squadra e collaborazione",
+            "Problem solving con pensiero logico",
+          ],
+          languages: [
+            "Portoghese: Madrelingua",
+            "Inglese: Intermedio (in miglioramento)",
+            "Spagnolo: Base (livello scolastico)",
+            "Francese: Base",
+          ],
+          certificates: [
+            {
+              title:
+                "Realtà Mista – Applicazioni grafiche immersive e non immersive | PUC Minas",
+              date: "29 aprile 2022 | 03h",
+            },
+            {
+              title:
+                "Workshop: Pagine Web con HTML, CSS e JavaScript | PUC Minas",
+              date: "06 maggio 2022 | 15h",
+            },
+            {
+              title: "Formazione: Pratica HTML & CSS in progetti web | Alura",
+              date: "24 agosto 2022 | 35h",
+            },
+            {
+              title: "CSS: Flexbox e Grid | Alura",
+              date: "01 settembre 2022 | 08h",
+            },
+            {
+              title: "Excel: Padroneggiare il foglio di calcolo | Alura",
+              date: "15 settembre 2022 | 10h",
+            },
+            {
+              title: "Corso Front-End Completo 2.0 | Danki Code",
+              date: "06 settembre 2023 | 10h",
+            },
+            {
+              title: "NLW Expert – HTML, CSS e JavaScript | Rocketseat",
+              date: "09 febbraio 2024 | 05h",
+            },
+          ],
+          extra: {
+            items: [
+              "Interesse per nuove tecnologie e soluzioni innovative.",
+              "Profilo GitHub:",
+              "Curriculum digitale:",
+              "Portfolio personale:",
+              "Blog di poesie:",
+            ],
+          },
+        },
+      };
+
+      const menuToggle = document.getElementById("menuToggle");
+      const menuItems = document.querySelector(".menu-items");
+
+      function openMenu() {
+        menuItems.dataset.state = "open";
+      }
+      function closeMenu() {
+        menuItems.dataset.state = "closed";
+      }
+
+      menuToggle?.addEventListener("click", () =>
+        menuItems.dataset.state === "open" ? closeMenu() : openMenu()
+      );
+      // Fecha o menu quando clica fora (para o mobile)
+      document.addEventListener("click", (e) => {
+        if (
+          !menuItems.contains(e.target) &&
+          !menuToggle.contains(e.target) &&
+          window.innerWidth <= 768
+        ) {
+          closeMenu();
+        }
+      });
+      // Fecha o menu se redimensionar para desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          closeMenu();
+        }
+      });
+      
+
+      (function () {
+        const body = document.body;
+        const root = document.documentElement;
+        const cvRoot = document.getElementById("cvRoot");
+
+        // ===== Tema (Funções de tema mantidas)
+        const themeToggle = document.getElementById("themeToggle");
+        const savedTheme = localStorage.getItem("cv_theme");
+        if (savedTheme === "dark") body.classList.add("dark");
+        if (themeToggle)
+          themeToggle.setAttribute(
+            "aria-pressed",
+            body.classList.contains("dark") ? "true" : "false"
+          );
+        themeToggle?.addEventListener("click", () => {
+          body.classList.toggle("dark");
+          const isDark = body.classList.contains("dark");
+          localStorage.setItem("cv_theme", isDark ? "dark" : "light");
+          themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+        });
+
+        // ===== Idioma (Mantido)
+        const langBox = document.querySelector(".lang");
+        const langBtn = document.getElementById("langBtn");
+        const langMenu = document.getElementById("langMenu");
+        const langCurrent = document.getElementById("langCurrent");
+
+        function openLang() {
+          langBox.dataset.state = "open";
+          langBtn.setAttribute("aria-expanded", "true");
+        }
+        function closeLang() {
+          langBox.dataset.state = "closed";
+          langBtn.setAttribute("aria-expanded", "false");
+        }
+        langBtn?.addEventListener("click", (e) => {
+            e.stopPropagation(); // Impede que o clique feche o menu principal se estiver aberto
+            langBox.dataset.state === "open" ? closeLang() : openLang()
+        });
+        document.addEventListener("click", (e) => {
+          if (!langBox.contains(e.target)) closeLang();
+        });
+
+        const savedLang = localStorage.getItem("cv_lang");
+        const navLang = (navigator.language || "pt-BR").toLowerCase();
+        const defaultLang = navLang.startsWith("pt")
+          ? "pt-BR"
+          : ["en", "fr", "es", "it"].find((l) => navLang.startsWith(l)) ||
+            "pt-BR";
+        
+        setLang(savedLang || defaultLang);
+
+        langMenu?.querySelectorAll("li").forEach((li) => {
+          li.addEventListener("click", () => {
+            setLang(li.getAttribute("data-lang"));
+            closeLang();
+          });
+        });
+
+        function setLang(code) {
+          const dict = I18N[code] || I18N["pt-BR"];
+          localStorage.setItem("cv_lang", code);
+          root.setAttribute("lang", code === "pt-BR" ? "pt-BR" : code);
+
+          const label =
+            {
+              "pt-BR": "Português (BR)",
+              en: "English",
+              fr: "Français",
+              es: "Español",
+              it: "Italiano",
+            }[code] || "Português (BR)";
+          langCurrent.textContent = label;
+
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            const translation = dict.labels[key] || dict[key];
+            if (translation) el.textContent = translation;
+          });
+
+          // 3. ATUALIZA O CONTEÚDO PRINCIPAL (Mantido)
+
+          // Header
+          document.getElementById("headerName").textContent = dict.header.name;
+          document.getElementById("role").textContent = dict.header.role; 
+          document.getElementById("locationValue").textContent = dict.header.locationValue;
+
+          // Objetivo
+          document.getElementById("objective-p").textContent = dict.objective.p;
+
+          // Formação Acadêmica
+          document.getElementById("education-course").innerHTML = `<strong>${dict.education.courseLabel}</strong> ${dict.education.course}`;
+          document.getElementById("education-institution").innerHTML = `<strong>${dict.education.institutionLabel}</strong> ${dict.education.institution}`;
+          document.getElementById("education-graduation").innerHTML = `<strong>${dict.education.graduationLabel}</strong> ${dict.education.graduation}`;
+
+          // Experiência Acadêmica e Projetos
+          document.querySelectorAll('section h2[data-i18n="projects"] + ul li').forEach((li, index) => {
+              const key = li.getAttribute('data-i18n');
+              if (key && dict.projects[key]) {
+                  if (key === 'p7') {
+                      li.childNodes[0].nodeValue = dict.projects.p7;
+                      const subItem = document.getElementById('p7sub');
+                      if (subItem) subItem.textContent = dict.projects.p7sub;
+                  } else {
+                      li.textContent = dict.projects[key];
+                  }
+              }
+          });
+          
+          // Experiência Profissional
+          function updateJob(jobKey) {
+            const jobDict = dict.experience[jobKey];
+            const jobDiv = document.getElementById(`job-${jobKey}`);
+            if (!jobDict || !jobDiv) return;
+
+            jobDiv.querySelector(`h3[data-i18n-job="${jobKey}-title"]`).textContent = jobDict.title;
+            jobDiv.querySelector(`p[data-i18n-job="${jobKey}-date"]`).textContent = jobDict.date;
+            
+            jobDiv.querySelector(`li[data-i18n-job="${jobKey}-a"]`).textContent = jobDict.a;
+            jobDiv.querySelector(`li[data-i18n-job="${jobKey}-b"]`).textContent = jobDict.b;
+            
+            const liC = jobDiv.querySelector(`li[data-i18n-job="${jobKey}-c"]`);
+            if (liC) {
+              if (jobDict.c) {
+                liC.textContent = jobDict.c;
+                liC.style.display = 'list-item';
+              } else {
+                liC.style.display = 'none';
+              }
+            }
+          }
+
+          updateJob('j1');
+          updateJob('j2');
+          updateJob('j3');
+          updateJob('j4');
+
+
+          // Soft Skills
+          document.querySelectorAll('#softSkills-list li').forEach((li, index) => {
+              if (dict.softSkills[index]) li.textContent = dict.softSkills[index];
+          });
+          
+          // Idiomas
+          document.querySelectorAll('#languages-list li').forEach((li, index) => {
+              if (dict.languages[index]) li.textContent = dict.languages[index];
+          });
+
+
+          // Certificados
+          document.querySelectorAll('#certificates-list > div').forEach((div, index) => {
+              const certDict = dict.certificates[index];
+              if (!certDict) return;
+
+              const titleEl = div.querySelector('h3');
+              if (titleEl) titleEl.textContent = certDict.title;
+
+              const dateEl = div.querySelector('li i');
+              if (dateEl) dateEl.textContent = certDict.date;
+          });
+          
+
+          // Informações Adicionais
+          document.querySelectorAll('#extra-list li').forEach((li, index) => {
+              const itemText = dict.extra.items[index];
+              if (!itemText) return;
+
+              const anchor = li.querySelector('a');
+              if (anchor) {
+                  const linkText = anchor.outerHTML;
+                  li.innerHTML = itemText + " " + linkText;
+              } else {
+                  li.textContent = itemText;
+              }
+          });
+          
+        }
+
+        // ===== Download PDF (CORRIGIDO: Força Light Mode) =====
+        const btnDownload = document.getElementById("btnDownload");
+        btnDownload?.addEventListener("click", async () => {
+          const fileName = "Curriculo_Vinicius_Viti.pdf";
+          
+          // 1. FORÇA O MODO CLARO TEMPORARIAMENTE
+          const wasDark = body.classList.contains("dark");
+          if (wasDark) body.classList.remove("dark");
+
+          // 2. Espera as imagens
+          await Promise.all(
+            [...cvRoot.querySelectorAll("img")].map((img) => {
+              if (img.complete) return Promise.resolve();
+              return new Promise((res) => {
+                img.onload = res;
+                img.onerror = res;
+              });
+            })
+          );
+          
+          // 3. Gera o PDF
+          try {
+            if (window.html2pdf) {
+              const prevShadow = cvRoot.style.boxShadow;
+              cvRoot.style.boxShadow = "none";
+              const opt = {
+                margin: [10, 10, 10, 10],
+                filename: fileName,
+                image: { type: "jpeg", quality: 0.98 },
+                html2canvas: {
+                  scale: 2,
+                  useCORS: true,
+                  backgroundColor: "#ffffff", // Garante fundo branco
+                },
+                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+                pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+              };
+              await html2pdf().set(opt).from(cvRoot).save();
+              cvRoot.style.boxShadow = prevShadow;
+            } else {
+              window.print();
+            }
+          } catch (e) {
+            console.error(e);
+            window.print();
+          } finally {
+            // 4. RESTAURA O MODO ESCURO se estava ativo
+            if (wasDark) body.classList.add("dark");
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

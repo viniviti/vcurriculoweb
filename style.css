@@ -1,39 +1,79 @@
-:root {
-  --fnt-prim: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --fnt-secun: 'Roboto', sans-serif;
-  
-  --cor-prim: #1900ff;
-  --cor-secun: #007c91;
-  --cor-terc: #333333;
-  --cor-qurt: #003366;
-  --cor-quint: #555555;
-  --cor-sext: #e0f7fa;
-  --cor-setm: #0099cc;
-  --cor-wht: #ffffff;
-  --cor-blk: #000000;
+/* ======= SEU CSS COMPLETO E CORRIGIDO PARA DARK MODE E RESPONSIVIDADE ======= */
 
-  --backg-cor: #f9f9f9;
+/* Variáveis de Cores Base */
+:root {
+  --fnt-prim: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --fnt-secun: "Roboto", sans-serif;
+
+  /* Cores de Destaque */
+  --cor-prim: #1900ff; /* Azul Principal (Títulos, Animação) */
+  --cor-secun: #007c91; /* Ciano Secundário (Texto das Tags) */
+  --cor-setm: #0099cc; /* Azul Ciano (Bullet Points) */
+  --blue: #2563eb; /* Azul Acessível (Botão Primário) */
+  --blue-700: #1d4ed8;
+
+  /* Cores do Tema CLARO */
+  --backg-cor: #f9f9f9; /* Fundo do Body */
+  --card-bg: #ffffff; /* Fundo de Componentes (Container, Topbar, Menu) */
+  --cor-terc: #333333; /* Cor Principal do Texto */
+  --cor-quint: #555555; /* Cor Secundária do Texto (Header p) */
+  --cor-sext: #e0f7fa; /* Fundo das Tags */
+
+  /* Cores de Borda/Sombra (Menu e Botões) */
+  --border-cor: #d1d5db;
+  --menu-hover-bg: #eff6ff;
+  --btn-text: #111827;
+  --shadow-cor: rgba(0, 0, 0, 0.1);
+  --shadow-topbar: rgba(0, 0, 0, 0.08);
 }
+
+/* Dark mode por classe: Redefine todas as cores do tema para tons escuros */
+body.dark {
+  /* Cores do Tema ESCURO */
+  --backg-cor: #0b0f1a; /* Fundo do Body */
+  --card-bg: #1e293b; /* Fundo de Componentes (Container, Topbar, Menu) */
+  --cor-terc: #e5e7eb; /* Cor Principal do Texto */
+  --cor-quint: #94a3b8; /* Cor Secundária do Texto (Header p) */
+  --cor-sext: #0b2f35; /* Fundo das Tags */
+
+  /* Cores de Destaque Adaptadas */
+  --cor-prim: #8ab4ff; /* Azul Principal (Títulos, Animação) */
+  --cor-secun: #7dd3fc; /* Ciano Secundário (Texto das Tags) */
+  --cor-setm: #60a5fa; /* Azul Ciano (Bullet Points) */
+
+  /* Cores de Borda/Sombra Adaptadas */
+  --border-cor: #374151; /* Borda mais escura */
+  --menu-hover-bg: #334155; /* Hover no menu dark */
+  --btn-text: #e5e7eb;
+  --shadow-cor: rgba(255, 255, 255, 0.05);
+  --shadow-topbar: rgba(0, 0, 0, 0.5);
+}
+
+/* ======= ESTILOS GLOBAIS COM VARIÁVEIS DO TEMA ======= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--fnt-prim);
   background-color: var(--backg-cor);
   color: var(--cor-terc);
   line-height: 1.6;
   padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .container {
   max-width: 900px;
-  margin: auto;
-  background: var(--cor-wht);
+  margin: 60px auto;
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px var(--shadow-cor);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 /* HEADER */
@@ -80,6 +120,7 @@ h2 {
 ul {
   list-style: none;
   padding-left: 10px;
+  color: var(--cor-terc);
 }
 ul li::before {
   content: "• ";
@@ -108,9 +149,11 @@ ul li::before {
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
+    padding-top: 72px; /* Espaço para a toolbar fixa no mobile */
   }
   .container {
     padding: 20px;
+    margin: auto;
   }
   .pf-img {
     width: 200px;
@@ -128,5 +171,194 @@ ul li::before {
     .logo {
       width: 100px;
     }
+  }
+}
+
+/* ======= TOOLBAR E RESPONSIVIDADE (MOBILE FIRST) ======= */
+
+/* TOOLBAR - Padrão Desktop (Texto visível) */
+.topbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: var(--card-bg);
+  box-shadow: 0 6px 24px var(--shadow-topbar);
+  z-index: 1000;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+body.dark .topbar {
+  box-shadow: 0 6px 24px var(--shadow-topbar);
+}
+.left-group,
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Oculta o menu hamburguer no desktop */
+.menu-mobile-only {
+  display: none; /* CORRIGIDO: Garante que está oculto por padrão (desktop) */
+}
+
+/* O grupo de itens de menu é visível por padrão no desktop */
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.text-on-desktop {
+  display: inline; /* Texto visível no desktop */
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-cor);
+  background: transparent;
+  color: var(--btn-text);
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.btn.primary {
+  background: var(--blue);
+  color: #fff;
+  border-color: transparent;
+}
+.btn.primary:hover {
+  background: var(--blue-700);
+}
+.lang .menu {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  min-width: 200px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-cor);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--shadow-cor);
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+  display: none;
+}
+.lang[data-state="open"] .menu {
+  display: block;
+}
+.lang .menu li {
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.lang .menu li:hover {
+  background: var(--menu-hover-bg);
+}
+
+@media (min-width: 769px) {
+  /* Garantimos que o menu hamburguer está oculto no desktop */
+  .menu-mobile-only {
+    display: none !important;
+  }
+}
+
+/* ===== MOBILE/TABLET (Max-width 768px) ===== */
+@media (max-width: 768px) {
+  /* MOSTRA o menu hamburguer */
+  .menu-mobile-only {
+    display: flex; /* CORRIGIDO: Garante que aparece no mobile */
+    padding: 8px;
+  }
+
+  /* ESCONDE o texto dos botões na toolbar (deixando só os ícones) */
+  .btn {
+    padding: 8px;
+  }
+  .text-on-desktop {
+    display: none;
+  }
+
+  /* Estilo do botão de download no mobile (apenas ícone) */
+  .btn.primary {
+    padding: 8px;
+  }
+
+  /* Faz os itens do menu sumirem/aparecerem no mobile */
+  .menu-items {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    box-shadow: 0 6px 10px var(--shadow-cor);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 10px;
+    gap: 0;
+    display: none; /* Escondido por padrão */
+  }
+
+  /* Exibe o menu items (Idioma e Tema) ao abrir o hamburguer */
+  .menu-items[data-state="open"] {
+    display: flex;
+  }
+
+  /* Ajusta os botões dentro do menu mobile para serem full-width e terem texto */
+  .menu-items .btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+  }
+  .menu-items .btn:hover {
+    background: var(--menu-hover-bg);
+    border: none;
+  }
+  .menu-items .text-on-desktop {
+    display: inline; /* Mostra o texto DENTRO do menu */
+  }
+  .menu-items .lang {
+    width: 100%;
+  }
+  .menu-items .lang .menu {
+    top: auto;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+}
+
+/* Impressão para PDF: esconde toolbar e remove sombras/bordas */
+@media print {
+  .topbar {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    padding: 0;
+  }
+  #cvRoot.container {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 18mm;
+  }
+  /* Garante que o PDF usa o tema claro */
+  body.dark {
+    /* O JS remove a classe .dark antes de gerar o PDF, mas este estilo é um fallback */
+    background: #fff !important;
+    color: var(--cor-terc) !important;
+  }
+  .container {
+    background: #fff !important;
+    color: var(--cor-terc) !important;
   }
 }
