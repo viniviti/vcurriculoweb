@@ -66,6 +66,16 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+a {
+  color: var(--cor-prim);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor-secun);
+  transition-duration: 300ms;
+}
+
 .container {
   max-width: 900px;
   margin: 60px auto;
