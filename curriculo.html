@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#ffffff" />
 
-  <title>Vinícius Freitas Viti — Desenvolvedor Front-End</title>
+  <title>Vinícius Freitas Viti — Currículo</title>
   <meta name="description"
     content="Currículo de Vinícius Freitas Viti, Desenvolvedor Front-End (Angular, React, Next.js, TypeScript). Bacharel em Ciência da Computação pela PUC Minas." />
   <meta name="author" content="Vinícius Freitas Viti" />
@@ -52,7 +52,7 @@
   </noscript>
 </head>
 
-<body>
+<body class="doc">
   <a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Pular para o conteúdo</a>
 
   <!-- ===== Sprite de ícones (Lucide) ===== -->
@@ -173,73 +173,20 @@
     </symbol>
   </svg>
 
-  <!-- ===== Navbar ===== -->
-  <nav class="nav" id="nav" aria-label="Navegação principal">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="#inicio" aria-label="VCurrículo — Vinícius Freitas Viti, início">
-        <img class="nav__logo" src="./image/logoG-prt.png" alt="VCurrículo" />
-      </a>
-
-      <div class="nav__links" id="navLinks">
-        <a href="#sobre" data-i18n="nav.about">Sobre</a>
-        <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
-        <a href="#projetos" data-i18n="nav.projects">Projetos</a>
-        <a href="#skills" data-i18n="nav.skills">Skills</a>
-        <a href="#idiomas" data-i18n="nav.languages">Idiomas</a>
-        <a href="#certificados" data-i18n="nav.certificates">Certificados</a>
-        <a href="#contato" data-i18n="nav.contact">Contato</a>
-      </div>
-
-      <div class="nav__actions">
-        <div class="lang" id="lang" data-open="false">
-          <button class="btn btn--ghost lang__btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false"
-            aria-label="Selecionar idioma">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-globe" />
-            </svg>
-            <span id="langCurrent" class="nav__label-desktop">PT</span>
-            <svg class="icon" aria-hidden="true" style="width: 14px; height: 14px">
-              <use href="#i-chevron" />
-            </svg>
-          </button>
-          <ul class="lang__menu" id="langMenu" role="listbox" aria-label="Idiomas">
-            <li role="option" data-lang="pt-BR" aria-selected="true"><span class="lang__flag">🇧🇷</span> Português</li>
-            <li role="option" data-lang="en" aria-selected="false"><span class="lang__flag">🇬🇧</span> English</li>
-            <li role="option" data-lang="es" aria-selected="false"><span class="lang__flag">🇪🇸</span> Español</li>
-          </ul>
-        </div>
-
-        <button class="btn btn--primary" id="navDownload" type="button" aria-label="Baixar currículo em PDF">
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-download" />
-          </svg>
-          <span class="nav__label-desktop" data-i18n="nav.download">Baixar PDF</span>
-        </button>
-
-        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
-          aria-controls="navLinks">
-          <svg class="icon" aria-hidden="true">
-            <use href="#i-menu" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
-
   <main id="conteudo">
     <!-- ===== Hero ===== -->
     <header class="hero" id="inicio">
       <div class="container">
-        <img class="hero__photo reveal" src="./image/fotoLinkedIn.png" alt="Foto de perfil de Vinícius Freitas Viti"
+        <img class="hero__photo" src="./image/fotoLinkedIn.png" alt="Foto de perfil de Vinícius Freitas Viti"
           width="128" height="128" />
-        <h1 class="hero__name reveal">Vinícius Freitas Viti</h1>
-        <p class="hero__role reveal" data-i18n="hero.role">Desenvolvedor Front-End</p>
-        <p class="hero__tagline reveal" data-i18n="hero.tagline">
+        <h1 class="hero__name">Vinícius Freitas Viti</h1>
+        <p class="hero__role" data-i18n="hero.role">Desenvolvedor Front-End</p>
+        <p class="hero__tagline" data-i18n="hero.tagline">
           Bacharel em Ciência da Computação. Construo interfaces responsivas e
           integração com APIs REST usando Angular, React, Next.js e TypeScript.
         </p>
 
-        <div class="hero__contact reveal">
+        <div class="hero__contact">
           <a class="chip" href="https://maps.google.com/?q=Poços+de+Caldas+MG" target="_blank" rel="noopener">
             <svg class="icon" aria-hidden="true">
               <use href="#i-pin" />
@@ -260,37 +207,17 @@
           </a>
         </div>
 
-        <div class="hero__cta reveal">
-          <button class="btn btn--primary" id="heroDownload" type="button">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-download" />
-            </svg>
-            <span data-i18n="hero.cta.download">Baixar currículo (PDF)</span>
-          </button>
-          <a class="btn btn--outline" href="https://github.com/viniviti" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-github" />
-            </svg>
-            GitHub
-          </a>
-          <a class="btn btn--outline" href="mailto:viti.2901@gmail.com">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-mail" />
-            </svg>
-            <span data-i18n="hero.cta.email">Enviar e-mail</span>
-          </a>
         </div>
-      </div>
     </header>
 
     <!-- ===== Sobre ===== -->
     <section class="section" id="sobre" aria-labelledby="sobre-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">01</span>
           <h2 class="section__title" id="sobre-title" data-i18n="nav.about">Sobre</h2>
         </div>
-        <p class="section__lead reveal" data-i18n="about.lead">
+        <p class="section__lead" data-i18n="about.lead">
           Bacharel em Ciência da Computação (PUC Minas), com experiência prática em
           desenvolvimento front-end utilizando Angular, React, TypeScript e JavaScript.
           Atuei na construção de interfaces responsivas, componentização e integração
@@ -301,7 +228,7 @@
           com o time de desenvolvimento e evoluir tecnicamente em um ambiente colaborativo.
         </p>
 
-        <div class="edu reveal">
+        <div class="edu">
           <span class="edu__icon"><svg class="icon" aria-hidden="true">
               <use href="#i-cap" />
             </svg></span>
@@ -316,14 +243,14 @@
     <!-- ===== Experiência ===== -->
     <section class="section" id="experiencia" aria-labelledby="exp-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">02</span>
           <h2 class="section__title" id="exp-title" data-i18n="nav.experience">Experiência</h2>
         </div>
 
         <div class="stack">
           <!-- Neuronex -->
-          <article class="card job reveal">
+          <article class="card job">
             <div class="job__top">
               <h3 class="job__title">
                 <span data-i18n="exp.j1.title">Desenvolvedor Front-End</span>
@@ -351,7 +278,7 @@
           </article>
 
           <!-- ID Logistics -->
-          <article class="card job reveal">
+          <article class="card job">
             <div class="job__top">
               <h3 class="job__title">
                 <span data-i18n="exp.j2.title">Analista Operacional &amp; Automações</span>
@@ -374,7 +301,7 @@
           </article>
 
           <!-- Kapibara -->
-          <article class="card job reveal">
+          <article class="card job">
             <div class="job__top">
               <h3 class="job__title">
                 <span data-i18n="exp.j3.title">Desenvolvedor Front-End Júnior</span>
@@ -405,14 +332,14 @@
     <!-- ===== Projetos ===== -->
     <section class="section" id="projetos" aria-labelledby="proj-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">03</span>
           <h2 class="section__title" id="proj-title" data-i18n="nav.projects">Projetos</h2>
         </div>
-        <p class="section__lead reveal" data-i18n="proj.lead">Projetos e experiência acadêmica.</p>
+        <p class="section__lead" data-i18n="proj.lead">Projetos e experiência acadêmica.</p>
 
         <div class="grid-2">
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project__head">
               <span class="project__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-sparkles" />
@@ -423,7 +350,7 @@
               com foco em inovação e modelo de negócios.</p>
           </article>
 
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project__head">
               <span class="project__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-layers" />
@@ -433,7 +360,7 @@
             <p class="project__desc" data-i18n="proj.p2.desc">Projeto de tecnologia imersiva com Unity e APIs BIM.</p>
           </article>
 
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project__head">
               <span class="project__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-code" />
@@ -445,7 +372,7 @@
               acadêmica.</p>
           </article>
 
-          <article class="card project reveal">
+          <article class="card project">
             <div class="project__head">
               <span class="project__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-briefcase" />
@@ -463,13 +390,13 @@
     <!-- ===== Skills ===== -->
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">04</span>
           <h2 class="section__title" id="skills-title" data-i18n="nav.skills">Skills</h2>
         </div>
 
         <div class="skills">
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-code" />
               </svg><span data-i18n="skills.frontend">Front-End</span></span>
@@ -479,7 +406,7 @@
                 class="tag">CSS3</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span>
             </div>
           </div>
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-db" />
               </svg><span data-i18n="skills.database">Banco de Dados</span></span>
@@ -487,7 +414,7 @@
               <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span>
             </div>
           </div>
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-wrench" />
               </svg><span data-i18n="skills.tools">Ferramentas</span></span>
@@ -496,7 +423,7 @@
                 class="tag">JSON</span>
             </div>
           </div>
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-flask" />
               </svg><span data-i18n="skills.testing">Testes</span></span>
@@ -504,7 +431,7 @@
               <span class="tag" data-i18n="skills.jest">Jest (nível básico)</span>
             </div>
           </div>
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-branch" />
               </svg><span data-i18n="skills.methods">Metodologias</span></span>
@@ -512,7 +439,7 @@
               <span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">XP</span>
             </div>
           </div>
-          <div class="skillcat reveal">
+          <div class="skillcat">
             <span class="skillcat__label"><svg class="icon" aria-hidden="true">
                 <use href="#i-sparkles" />
               </svg><span data-i18n="skills.extra">Complementar</span></span>
@@ -526,19 +453,19 @@
         <h3 class="section__title" style="font-size: 1.15rem; margin-top: 8px" data-i18n="skills.softTitle">Soft Skills
         </h3>
         <div class="softgrid">
-          <div class="soft reveal"><svg class="icon" aria-hidden="true">
+          <div class="soft"><svg class="icon" aria-hidden="true">
               <use href="#i-check" />
             </svg><span data-i18n="soft.s1">Proatividade e curiosidade técnica</span></div>
-          <div class="soft reveal"><svg class="icon" aria-hidden="true">
+          <div class="soft"><svg class="icon" aria-hidden="true">
               <use href="#i-check" />
             </svg><span data-i18n="soft.s2">Comunicação clara e objetiva</span></div>
-          <div class="soft reveal"><svg class="icon" aria-hidden="true">
+          <div class="soft"><svg class="icon" aria-hidden="true">
               <use href="#i-check" />
             </svg><span data-i18n="soft.s3">Facilidade com aprendizado autônomo</span></div>
-          <div class="soft reveal"><svg class="icon" aria-hidden="true">
+          <div class="soft"><svg class="icon" aria-hidden="true">
               <use href="#i-check" />
             </svg><span data-i18n="soft.s4">Colaboração e trabalho em equipe</span></div>
-          <div class="soft reveal"><svg class="icon" aria-hidden="true">
+          <div class="soft"><svg class="icon" aria-hidden="true">
               <use href="#i-check" />
             </svg><span data-i18n="soft.s5">Organização e foco em entrega</span></div>
         </div>
@@ -548,22 +475,22 @@
     <!-- ===== Idiomas ===== -->
     <section class="section" id="idiomas" aria-labelledby="idiomas-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">05</span>
           <h2 class="section__title" id="idiomas-title" data-i18n="nav.languages">Idiomas</h2>
         </div>
         <div class="langs">
-          <div class="langcard reveal">
+          <div class="langcard">
             <div class="langcard__flag">🇧🇷</div>
             <p class="langcard__name" data-i18n="lang.l1.name">Português</p>
             <p class="langcard__level" data-i18n="lang.l1.level">Nativo</p>
           </div>
-          <div class="langcard reveal">
+          <div class="langcard">
             <div class="langcard__flag">🇬🇧</div>
             <p class="langcard__name" data-i18n="lang.l2.name">Inglês</p>
             <p class="langcard__level" data-i18n="lang.l2.level">Intermediário (em progresso)</p>
           </div>
-          <div class="langcard reveal">
+          <div class="langcard">
             <div class="langcard__flag">🇪🇸</div>
             <p class="langcard__name" data-i18n="lang.l3.name">Espanhol</p>
             <p class="langcard__level" data-i18n="lang.l3.level">Básico (nível escolar)</p>
@@ -575,12 +502,12 @@
     <!-- ===== Certificados ===== -->
     <section class="section" id="certificados" aria-labelledby="cert-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">06</span>
           <h2 class="section__title" id="cert-title" data-i18n="nav.certificates">Certificados</h2>
         </div>
         <div class="certs">
-          <div class="cert reveal">
+          <div class="cert">
             <span class="cert__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-award" />
               </svg></span>
@@ -589,7 +516,7 @@
               <p class="cert__org">Danki Code</p>
             </div>
           </div>
-          <div class="cert reveal">
+          <div class="cert">
             <span class="cert__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-award" />
               </svg></span>
@@ -598,7 +525,7 @@
               <p class="cert__org">Danki Code</p>
             </div>
           </div>
-          <div class="cert reveal">
+          <div class="cert">
             <span class="cert__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-award" />
               </svg></span>
@@ -607,7 +534,7 @@
               <p class="cert__org">Rocketseat</p>
             </div>
           </div>
-          <div class="cert reveal">
+          <div class="cert">
             <span class="cert__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-award" />
               </svg></span>
@@ -616,7 +543,7 @@
               <p class="cert__org">PUC Minas</p>
             </div>
           </div>
-          <div class="cert reveal">
+          <div class="cert">
             <span class="cert__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-award" />
               </svg></span>
@@ -632,13 +559,13 @@
     <!-- ===== Contato ===== -->
     <section class="section" id="contato" aria-labelledby="contato-title">
       <div class="container">
-        <div class="section__head reveal">
+        <div class="section__head">
           <span class="section__num">07</span>
           <h2 class="section__title" id="contato-title" data-i18n="nav.contact">Contato</h2>
         </div>
 
         <div class="contact">
-          <a class="contact__item reveal" href="mailto:viti.2901@gmail.com">
+          <a class="contact__item" href="mailto:viti.2901@gmail.com">
             <span class="contact__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-mail" />
               </svg></span>
@@ -647,7 +574,7 @@
               <span class="contact__value">viti.2901@gmail.com</span>
             </span>
           </a>
-          <a class="contact__item reveal" href="https://wa.me/5535998178132" target="_blank" rel="noopener">
+          <a class="contact__item" href="https://wa.me/5535998178132" target="_blank" rel="noopener">
             <span class="contact__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-phone" />
               </svg></span>
@@ -656,7 +583,7 @@
               <span class="contact__value">(35) 99817-8132</span>
             </span>
           </a>
-          <a class="contact__item reveal" href="https://github.com/viniviti" target="_blank" rel="noopener">
+          <a class="contact__item" href="https://github.com/viniviti" target="_blank" rel="noopener">
             <span class="contact__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-github" />
               </svg></span>
@@ -665,7 +592,7 @@
               <span class="contact__value">github.com/viniviti</span>
             </span>
           </a>
-          <a class="contact__item reveal" href="https://vportfolioweb.vercel.app" target="_blank" rel="noopener">
+          <a class="contact__item" href="https://vportfolioweb.vercel.app" target="_blank" rel="noopener">
             <span class="contact__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-external" />
               </svg></span>
@@ -674,7 +601,7 @@
               <span class="contact__value">vportfolioweb.vercel.app</span>
             </span>
           </a>
-          <div class="contact__item reveal">
+          <div class="contact__item">
             <span class="contact__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-pin" />
               </svg></span>
@@ -685,7 +612,7 @@
           </div>
         </div>
 
-        <div class="contact__note reveal">
+        <div class="contact__note">
           <svg class="icon" aria-hidden="true">
             <use href="#i-info" />
           </svg>
@@ -696,16 +623,6 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="container">
-      <img class="footer__logo" src="./image/logoG-prt.png" alt="Logo VCurrículo" />
-      <p class="footer__text">
-        <span data-i18n="footer.built">Desenvolvido em HTML, CSS e JavaScript</span> ·
-        © <span id="year">2026</span> Vinícius Freitas Viti
-      </p>
-    </div>
-  </footer>
   <script src="script.js" defer></script>
 </body>
 
