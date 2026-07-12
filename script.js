@@ -28,7 +28,7 @@
       "hero.cta.email": "Enviar e-mail",
 
       "about.lead":
-        "Bacharel em Ciência da Computação (PUC Minas), com experiência prática em desenvolvimento front-end utilizando Angular, React, TypeScript e JavaScript. Atuei na construção de interfaces responsivas, componentização e integração com APIs REST em produtos digitais utilizados por clientes reais. Tenho familiaridade com lógica de programação, versionamento em Git e metodologias ágeis (Scrum/Kanban), e busco uma posição júnior em engenharia de software front-end onde eu possa aplicar e aprofundar esses conhecimentos, contribuir com o time de desenvolvimento e evoluir tecnicamente em um ambiente colaborativo.",
+        "Bacharel em Ciência da Computação (PUC Minas) e Desenvolvedor Front-End/Fullstack, com mais de 1 ano de experiência prática construindo interfaces responsivas e integrações com APIs REST usando Angular, React, Next.js e TypeScript, além de back-end com Node.js e NestJS. Atuei na construção de produtos digitais utilizados por clientes reais, com familiaridade em versionamento Git e metodologias ágeis (Scrum/Kanban). Busco novos desafios em engenharia de software front-end/fullstack, contribuindo tecnicamente com o time e evoluindo em ambientes colaborativos.",
       "about.eduTitle": "PUC Minas – Campus Poços de Caldas",
       "about.eduMeta": "Bacharelado em Ciência da Computação — Concluído em 2026",
 
@@ -67,15 +67,16 @@
       "exp.j3.d":
         "Trabalho em equipe ágil com metodologia Kanban e versionamento de código via Git.",
 
-      "proj.lead": "Projetos e experiência acadêmica.",
-      "proj.p1.title": "Fator S Agita | PUC Minas + SEBRAE",
+      "proj.lead": "Projetos pessoais e experiência recente.",
+      "proj.p1.title": "VCurrículo",
       "proj.p1.desc":
-        "Participação em programa de desenvolvimento de startups, com foco em inovação e modelo de negócios.",
-      "proj.p2.title": "Visualização BIM com Realidade Misturada",
-      "proj.p2.desc": "Projeto de tecnologia imersiva com Unity e APIs BIM.",
-      "proj.p3.title": "App e Vaso Inteligente para Plantas | PUCTec 2024",
+        "Currículo web pessoal multilíngue (PT/EN/ES), com geração de PDF, desenvolvido do zero em HTML, CSS e JavaScript.",
+      "proj.p2.title": "VPortfólio",
+      "proj.p2.desc":
+        "Portfólio pessoal com tema dark premium, FAB de redes sociais animado e carrossel de projetos interativo com modais.",
+      "proj.p3.title": "DocumenTI",
       "proj.p3.desc":
-        "Solução IoT com Arduino, apresentada em feira de inovação acadêmica.",
+        "Hub de referência que agrega links de documentação oficial de tecnologias fullstack, com foco em performance e usabilidade.",
       "proj.p4.title": "Portfólio Web",
       "proj.p4.desc":
         "Desenvolvimento e manutenção de portfólio ativo com projetos reais em React/Next.js, incluindo testes unitários básicos com Jest, hospedado via GitHub Pages e Vercel.",
@@ -135,11 +136,11 @@
       "hero.tagline":
         "B.Sc. in Computer Science. I build responsive interfaces and REST API integrations with Angular, React, Next.js and TypeScript.",
       "hero.location": "Poços de Caldas – MG, Brazil",
-      "hero.cta.download": "Download résumé (PDF)",
+      "hero.cta.download": "Download resume (PDF)",
       "hero.cta.email": "Send email",
 
       "about.lead":
-        "B.Sc. in Computer Science (PUC Minas) with hands-on front-end development experience using Angular, React, TypeScript and JavaScript. I have built responsive interfaces, componentization and REST API integrations in digital products used by real clients. Familiar with programming logic, Git version control and agile methodologies (Scrum/Kanban), I am looking for a junior front-end software engineering position where I can apply and deepen this knowledge, contribute to the development team and grow technically in a collaborative environment.",
+        "B.Sc. in Computer Science (PUC Minas) and Front-End/Fullstack Developer with over 1 year of hands-on experience building responsive interfaces and REST API integrations using Angular, React, Next.js and TypeScript, as well as back-end development with Node.js and NestJS. I have built digital products used by real clients, with solid Git version control and agile methodology (Scrum/Kanban) experience. I'm looking for new challenges in front-end/fullstack software engineering, contributing technically to the team and growing in collaborative environments.",
       "about.eduTitle": "PUC Minas – Poços de Caldas Campus",
       "about.eduMeta": "B.Sc. in Computer Science — Completed in 2026",
 
@@ -178,15 +179,16 @@
       "exp.j3.d":
         "Agile teamwork with Kanban methodology and code versioning via Git.",
 
-      "proj.lead": "Projects and academic experience.",
-      "proj.p1.title": "Fator S Agita | PUC Minas + SEBRAE",
+      "proj.lead": "Personal projects and recent work.",
+      "proj.p1.title": "VCurrículo",
       "proj.p1.desc":
-        "Participation in a startup development program, focused on innovation and business modeling.",
-      "proj.p2.title": "BIM Visualization with Mixed Reality",
-      "proj.p2.desc": "Immersive technology project with Unity and BIM APIs.",
-      "proj.p3.title": "Smart Plant Pot App | PUCTec 2024",
+        "Personal multilingual (PT/EN/ES) web resume with PDF generation, built from scratch with HTML, CSS and JavaScript.",
+      "proj.p2.title": "VPortfólio",
+      "proj.p2.desc":
+        "Personal portfolio with a premium dark theme, animated floating social FAB, and an interactive project carousel with modals.",
+      "proj.p3.title": "DocumenTI",
       "proj.p3.desc":
-        "IoT solution with Arduino, presented at an academic innovation fair.",
+        "Reference hub aggregating official documentation links for fullstack technologies, focused on performance and usability.",
       "proj.p4.title": "Web Portfolio",
       "proj.p4.desc":
         "Development and maintenance of an active portfolio with real projects in React/Next.js, including basic unit tests with Jest, hosted via GitHub Pages and Vercel.",
@@ -250,7 +252,7 @@
       "hero.cta.email": "Enviar correo",
 
       "about.lead":
-        "Licenciado en Ciencias de la Computación (PUC Minas), con experiencia práctica en desarrollo front-end utilizando Angular, React, TypeScript y JavaScript. Participé en la construcción de interfaces responsivas, componentización e integración con APIs REST en productos digitales utilizados por clientes reales. Tengo familiaridad con lógica de programación, control de versiones con Git y metodologías ágiles (Scrum/Kanban), y busco una posición júnior en ingeniería de software front-end donde pueda aplicar y profundizar estos conocimientos, contribuir con el equipo de desarrollo y evolucionar técnicamente en un entorno colaborativo.",
+        "Licenciado en Ciencias de la Computación (PUC Minas) y Desarrollador Front-End/Fullstack, con más de 1 año de experiencia práctica construyendo interfaces responsivas e integraciones con APIs REST usando Angular, React, Next.js y TypeScript, además de back-end con Node.js y NestJS. Participé en la construcción de productos digitales utilizados por clientes reales, con experiencia en control de versiones Git y metodologías ágiles (Scrum/Kanban). Busco nuevos desafíos en ingeniería de software front-end/fullstack, contribuyendo técnicamente con el equipo y evolucionando en entornos colaborativos.",
       "about.eduTitle": "PUC Minas – Campus Poços de Caldas",
       "about.eduMeta":
         "Licenciatura en Ciencias de la Computación — Concluido en 2026",
@@ -290,15 +292,16 @@
       "exp.j3.d":
         "Trabajo en equipo ágil con metodología Kanban y versionado de código vía Git.",
 
-      "proj.lead": "Proyectos y experiencia académica.",
-      "proj.p1.title": "Fator S Agita | PUC Minas + SEBRAE",
+      "proj.lead": "Proyectos personales y experiencia reciente.",
+      "proj.p1.title": "VCurrículo",
       "proj.p1.desc":
-        "Participación en un programa de desarrollo de startups, con foco en innovación y modelo de negocios.",
-      "proj.p2.title": "Visualización BIM con Realidad Mixta",
-      "proj.p2.desc": "Proyecto de tecnología inmersiva con Unity y APIs BIM.",
-      "proj.p3.title": "App y Maceta Inteligente para Plantas | PUCTec 2024",
+        "CV web personal multilingüe (PT/EN/ES), con generación de PDF, desarrollado desde cero en HTML, CSS y JavaScript.",
+      "proj.p2.title": "VPortfólio",
+      "proj.p2.desc":
+        "Portafolio personal con tema oscuro premium, FAB animado de redes sociales y carrusel de proyectos interactivo con modales.",
+      "proj.p3.title": "DocumenTI",
       "proj.p3.desc":
-        "Solución IoT con Arduino, presentada en feria de innovación académica.",
+        "Hub de referencia que reúne enlaces de documentación oficial de tecnologías fullstack, enfocado en rendimiento y usabilidad.",
       "proj.p4.title": "Portafolio Web",
       "proj.p4.desc":
         "Desarrollo y mantenimiento de un portafolio activo con proyectos reales en React/Next.js, incluyendo pruebas unitarias básicas con Jest, alojado en GitHub Pages y Vercel.",
