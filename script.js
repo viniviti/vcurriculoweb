@@ -39,11 +39,11 @@
       "exp.j1.b":
         "Criação de componentes reutilizáveis e interfaces responsivas, aplicando boas práticas de organização de código.",
       "exp.j1.c":
-        "Integração com APIs REST para consumo e envio de dados entre front-end e serviços de back-end.",
+        "Integração com APIs REST (Node.js/NestJS) para consumo e envio de dados entre front-end e serviços de back-end.",
       "exp.j1.d":
         "Colaboração com equipe multidisciplinar utilizando Git e metodologias ágeis (Kanban).",
       "exp.j1.e":
-        "Correção de bugs e participação na evolução contínua do produto, com foco em usabilidade e consistência da interface.",
+        "Correção de bugs, testes e depuração de funcionalidades, com foco em usabilidade, performance e consistência da interface.",
 
       "exp.j2.title": "Analista Operacional & Automações",
       "exp.j2.date": "Ago 2024 – Jun 2025",
@@ -150,11 +150,11 @@
       "exp.j1.b":
         "Creation of reusable components and responsive interfaces, applying good code organization practices.",
       "exp.j1.c":
-        "REST API integration to consume and send data between the front end and back-end services.",
+        "REST API integration (Node.js/NestJS) to consume and send data between the front end and back-end services.",
       "exp.j1.d":
         "Collaboration with a multidisciplinary team using Git and agile methodologies (Kanban).",
       "exp.j1.e":
-        "Bug fixing and participation in the continuous evolution of the product, focused on usability and interface consistency.",
+        "Bug fixing, testing and debugging of features, focused on usability, performance and interface consistency.",
 
       "exp.j2.title": "Operations & Automation Analyst",
       "exp.j2.date": "Aug 2024 – Jun 2025",
@@ -262,11 +262,11 @@
       "exp.j1.b":
         "Creación de componentes reutilizables e interfaces responsivas, aplicando buenas prácticas de organización de código.",
       "exp.j1.c":
-        "Integración con APIs REST para el consumo y envío de datos entre el front-end y los servicios de back-end.",
+        "Integración con APIs REST (Node.js/NestJS) para el consumo y envío de datos entre el front-end y los servicios de back-end.",
       "exp.j1.d":
         "Colaboración con equipo multidisciplinario utilizando Git y metodologías ágiles (Kanban).",
       "exp.j1.e":
-        "Corrección de bugs y participación en la evolución continua del producto, con foco en usabilidad y consistencia de la interfaz.",
+        "Corrección de bugs, pruebas y depuración de funcionalidades, con foco en usabilidad, rendimiento y consistencia de la interfaz.",
 
       "exp.j2.title": "Analista Operativo & Automatizaciones",
       "exp.j2.date": "Ago 2024 – Jun 2025",
